@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="popup downloadData" id="popupDownloadData">
+			<input type="checkbox" id="popup-toggle" />
+
+			<label for="popup-toggle" class="popup_btn">
+				<img src="./svg/plus.svg" />
+				<span class="popup_text">Новый проект</span>
+			</label>
+
+			<div class="overlay"></div>
+
+			<div class="popup_container">
+				<label for="popup-toggle" class="close-btn">
+					<img src="./svg/close.svg" />
+				</label>
+				<div class="popup_content">
+					<h1 class="popup_title">Создание нового проекта</h1>
+					<div class="hints_container">
+						<h2 class="part_title">Подключите проект через Я.Вебмастер</h2>
+						<div class="hints_info">
+							<div class="hints_icon"></div>
+							<span class="hint_info-text">
+								Убедитесь, что вы авторизованы в
+								<a
+									href="https://passport.yandex.ru/auth/plain?retpath=https%3A%2F%2Foauth.yandex.ru%2Fclient%2Fnew&noreturn=1&origin=oauth"
+								>
+									аккаунте Яндекс
+								</a>
+								и у вас создано приложение. Подробная
+								<a href="">видео-инструкция</a> по созданию приложения.
+							</span>
+						</div>
+
+						<input type="checkbox" id="switch_btn" />
+
+						<div class="switch_container">
+							<span class="switch_span">Автоматически</span>
+							<label class="switch_label" for="switch_btn">
+								<span class="switch_toggle"></span>
+							</label>
+						</div>
+						<div class="id_container">
+							<label>
+								<div class="client-id">
+									<h2 class="part_title">Client ID</h2>
+									<svg
+										class="help_icon"
+										width="16"
+										height="17"
+										viewBox="0 0 16 17"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M8.59929 12.9393C8.42521 13.1134 8.21419 13.2 7.96 13.2C7.70581 13.2 7.49479 13.1134 7.32071 12.9393C7.14663 12.7652 7.06 12.5542 7.06 12.3C7.06 12.0458 7.14663 11.8348 7.32071 11.6607C7.49479 11.4866 7.70581 11.4 7.96 11.4C8.21419 11.4 8.42521 11.4866 8.59929 11.6607C8.77337 11.8348 8.86 12.0458 8.86 12.3C8.86 12.5542 8.77337 12.7652 8.59929 12.9393ZM8.62087 10.12H7.34047C7.34662 9.46904 7.41355 9.0365 7.52944 8.80472C7.58993 8.68376 7.70593 8.52682 7.88377 8.33252C8.06038 8.13955 8.29391 7.91407 8.58521 7.65583C8.83101 7.45083 9.03704 7.22781 9.20247 6.98655C9.37316 6.73764 9.46 6.46811 9.46 6.18C9.46 5.87176 9.34165 5.59173 9.1138 5.34252C8.87557 5.08196 8.5245 4.96 8.08 4.96C7.58038 4.96 7.19113 5.10644 6.93318 5.41598C6.7268 5.66363 6.57983 5.901 6.49745 6.12788L5.36618 5.68223C5.55125 5.17862 5.86001 4.74359 6.29455 4.37638C6.746 3.99487 7.33808 3.8 8.08 3.8C8.80772 3.8 9.43318 3.99453 9.96095 4.3807C10.479 4.75975 10.74 5.30145 10.74 6.02C10.74 6.44449 10.6437 6.80169 10.4557 7.0962C10.2608 7.40153 9.99289 7.72558 9.65032 8.06826C9.1843 8.50777 8.88589 8.8674 8.77699 9.14328C8.67849 9.3928 8.62797 9.71997 8.62087 10.12ZM8 16.4C6.90635 16.4 5.87989 16.1925 4.91962 15.7782C3.95741 15.363 3.12141 14.8 2.41071 14.0893C1.70001 13.3786 1.13702 12.5426 0.721817 11.5804C0.307452 10.6201 0.1 9.59365 0.1 8.5C0.1 7.40635 0.307452 6.37989 0.721817 5.41962C1.13702 4.45741 1.70001 3.62141 2.41071 2.91071C3.12141 2.20001 3.95741 1.63702 4.91962 1.22182C5.87989 0.807452 6.90635 0.6 8 0.6C9.09365 0.6 10.1201 0.807452 11.0804 1.22182C12.0426 1.63702 12.8786 2.20001 13.5893 2.91071C14.3 3.62141 14.863 4.45741 15.2782 5.41962C15.6925 6.37989 15.9 7.40635 15.9 8.5C15.9 9.59365 15.6925 10.6201 15.2782 11.5804C14.863 12.5426 14.3 13.3786 13.5893 14.0893C12.8786 14.8 12.0426 15.363 11.0804 15.7782C10.1201 16.1925 9.09365 16.4 8 16.4ZM8 15C9.81263 15 11.3516 14.3699 12.6107 13.1107C13.8699 11.8516 14.5 10.3126 14.5 8.5C14.5 6.68737 13.8699 5.14844 12.6107 3.88929C11.3516 2.63014 9.81263 2 8 2C6.18737 2 4.64844 2.63014 3.38929 3.88929C2.13014 5.14844 1.5 6.68737 1.5 8.5C1.5 10.3126 2.13014 11.8516 3.38929 13.1107C4.64844 14.3699 6.18737 15 8 15Z"
+											fill="#BBBBBB"
+											stroke="white"
+											stroke-width="0.2"
+										/>
+									</svg>
+								</div>
+								<input
+									class="input-box"
+									type="text"
+									placeholder="Введите данные из Я.Вебмастера"
+								/>
+							</label>
+						</div>
+						<div class="data_container">
+							<label>
+								<h2 class="part_title">Access token</h2>
+								<input
+									class="input-box"
+									type="text"
+									placeholder="Введите данные из Я.Вебмастера"
+								/>
+							</label>
+							<label>
+								<h2 class="part_title">User ID</h2>
+								<input
+									class="input-box"
+									type="text"
+									placeholder="Введите данные из Я.Вебмастера"
+								/>
+							</label>
+							<label>
+								<h2 class="part_title">Host ID</h2>
+								<input
+									class="input-box"
+									type="text"
+									placeholder="Введите данные из Я.Вебмастера"
+								/>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="btn_container">
+					<button class="btn connect" id="connectBtn" type="submit">
+						Подключить
+					</button>
+					<button class="btn cancel" type="reset">Отменить</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="popup fillData" id="popupFillData">
+			<div class="popup_container">
+				<label for="popup-toggle" class="close-btn">
+					<img src="./svg/close.svg" />
+				</label>
+				<div class="popup_content">
+					<h1 class="popup_title">Создание нового проекта</h1>
+					<div class="data_container">
+						<label>
+							<h2 class="part_title">Проект для подключения</h2>
+							<input
+								class="input-box"
+								list="projects"
+								placeholder="Выберите проект из списка"
+								required
+							/>
+							<datalist id="projects">
+								<option value="Проект 1"></option>
+								<option value="Проект 2"></option>
+								<option value="Проект 3"></option>
+								<option value="Проект 4"></option>
+								<option value="Проект 5"></option>
+								<option value="Проект 6"></option>
+								<option value="Проект 7"></option>
+								<option value="Проект 8"></option>
+								<option value="Проект 9"></option>
+								<option value="Проект 10"></option>
+							</datalist>
+						</label>
+						<label>
+							<h2 class="part_title">Название</h2>
+							<input
+								class="input-box"
+								type="text"
+								placeholder="Введите название проекта"
+								required
+							/>
+						</label>
+						<label>
+							<h2 class="part_title">Папка проекта</h2>
+							<input
+								class="input-box"
+								type="text"
+								placeholder="Выберите или создайте папку для проекта"
+							/>
+						</label>
+					</div>
+					<div class="btn_container">
+						<button class="btn connect" type="submit">Подключить</button>
+						<button class="btn cancel" type="reset">Отменить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			// Получаем элементы
+			const connectBtn = document.getElementById('connectBtn');
+			const popupDownloadData = document.getElementById('popupDownloadData');
+			const popupFillData = document.getElementById('popupFillData');
+
+			// Обработка нажатия на кнопку "Подключить"
+			connectBtn.addEventListener('click', function () {
+				popupDownloadData.classList.remove('show'); // Скрываем первое окно
+				popupFillData.classList.add('show'); // Показываем второе окно
+			});
+		</script>
+	</body>
+</html>
