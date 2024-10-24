@@ -1,10 +1,33 @@
-// Получаем элементы
+'use strict';
 const connectBtn = document.getElementById('connectBtn');
-const popupDownloadData = document.getElementById('popupDownloadData');
-const popupFillData = document.getElementById('popupFillData');
+const saveBtn = document.getElementById('saveBtn');
+const closeBtn = document.getElementById('closeBtn');
+const finishBtn = document.getElementById('finishBtn');
+const downloadData = document.getElementById('downloadData');
+const fillData = document.getElementById('fillData');
+const connected = document.getElementById('connected');
+const overlay = document.getElementById('overlay');
 
-// Обработка нажатия на кнопку "Подключить"
 connectBtn.addEventListener('click', function () {
-	popupDownloadData.classList.remove('show'); // Скрываем первое окно
-	popupFillData.classList.add('show'); // Показываем второе окно
+	downloadData.style.display = 'none';
+	fillData.style.display = 'block';
+});
+
+saveBtn.addEventListener('click', function () {
+	fillData.style.display = 'none';
+	connected.style.display = 'block';
+});
+
+finishBtn.addEventListener('click', function () {
+	fillData.style.display = 'none';
+	downloadData.style.display = 'none';
+	connected.style.display = 'none';
+	overlay.style.display = 'none';
+});
+
+closeBtn.addEventListener('click', function () {
+	fillData.style.display = 'none';
+	downloadData.style.display = 'none';
+	connected.style.display = 'none';
+	overlay.style.display = 'none';
 });
